@@ -1,6 +1,7 @@
 var RTH = require('..');
 var Constant = RTH.Constant;
-var PublicApi = RTH.PublicApi;
-PublicApi.depthXrp('XRP_JPY', Constant.ISSUER.RIPPLE_TRADE_JAPAN).then(console.log)
+var api = RTH.createPublicApi(Constant.ISSUER.RIPPLE_TRADE_JAPAN);
+
+api.depth('XRP_JPY').then(console.log)
 
 
