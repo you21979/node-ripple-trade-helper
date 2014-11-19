@@ -2,19 +2,16 @@
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "ripple-trade-helper",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "dependencies": {
     "bluebird":"",
-    "syncwait":"",
+    "async":"",
     "ripple-lib":""
   },
   "readmeFilename": "README.md",
   "description": "ripple-trade-helper trade api for promise",
   "main": "index.js",
   "devDependencies": {
-    "bluebird" : "",
-    "mocha" : "",
-    "power-assert" : ""
   },
   "scripts": {
     "test": ""
