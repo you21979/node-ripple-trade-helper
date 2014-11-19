@@ -9,4 +9,5 @@ var bot01 = config['bot01'];
 var rtj = RTH.createPrivateApi(bot01.address, bot01.secret, Constant.ISSUER.RIPPLE_TRADE_JAPAN);
 //rtj.sell("XRP_JPY", 10, 0.777).then(console.log);
 //rtj.cancelOrder(id).then(console.log);
+//rtj.withdraw('address', 1, 'XRP').then(console.log);
 
