@@ -18,6 +18,7 @@ exchange
 * sell
 * orderlist
 * cancel
+* orderbook
 
 wallet
 ------
