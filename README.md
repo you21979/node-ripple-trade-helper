@@ -1,5 +1,9 @@
 node-ripple-trade-helper
 ========================
+
+what is this
+------------
+
 ripple上の取引システムを簡単に扱えるようにしたライブラリ
 
 rippleのシステムは扱える商品が複雑なので幾つかドメインを絞っている
@@ -10,11 +14,11 @@ rippleのシステムは扱える商品が複雑なので幾つかドメイン�
 exchange
 --------
 
+* orderbook
 * buy
 * sell
 * orderlist
 * cancel
-* orderbook
 
 wallet
 ------
