@@ -28,7 +28,12 @@ wallet
 * withdraw
 
 
+License
+-------
+MIT License
 
-
-
-
+domate
+------
+ripple:raWU9xY9WgG8mrSZs3Gu37XFhFwcxGeDDa
+bitcoin:1GLnWVBpadWnHpxf8KpXTQdwMdHAWtzNEw
+monacoin:MCEp2NWSFc352uaDc6nQYv45qUChnKRsKK
