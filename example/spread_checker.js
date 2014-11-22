@@ -10,7 +10,7 @@ var watchlist = [
 var Promise = require('bluebird');
 var fee = 0.001;
 
-Promise.all(watchlist.map(function(v){ return RTH.createPublicApi(v).depth('XRP_JPY') })).then(function(res){
+Promise.all(watchlist.map(function(v){ return RTH.createPublicApi(v).orderBook('XRP_JPY') })).then(function(res){
     var bids = [];
     var asks = [];
     res.forEach(function(v){
