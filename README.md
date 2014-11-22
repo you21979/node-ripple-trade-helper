@@ -12,6 +12,14 @@ rippleのシステムは扱える商品が複雑なので幾つかドメイン�
 * XRPとIOUの組み合わせだけの取り扱い(USD/JPYなどのIOU1/IOU2は取り扱わない)
 * ウォレットが取引所にあるかのように扱う
 
+install
+-------
+```
+git clone https://github.com/you21979/node-ripple-trade-helper.git
+cd node-ripple-trade-helper
+npm install
+```
+
 exchange
 --------
 
