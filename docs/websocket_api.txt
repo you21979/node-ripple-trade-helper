@@ -1,0 +1,13 @@
+
+protocol document
+-----------------
+https://ripple.com/build/rippled-apis/#api-methods
+
+protocol check
+--------------
+https://ripple.com/build/websocket-tool/
+
+javascript library
+------------------
+https://github.com/ripple/ripple-lib/blob/develop/docs/GUIDES.md
+
