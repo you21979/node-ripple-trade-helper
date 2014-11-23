@@ -1,4 +1,4 @@
-var RTH = require('..');
+var RTH = require('../..');
 var Constant = RTH.Constant;
 
 var fs = require('fs');
