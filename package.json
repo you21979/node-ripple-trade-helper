@@ -5,8 +5,8 @@
   "private": true,
   "dependencies": {
     "bluebird":"",
-    "async":"",
-    "ripple-lib":""
+    "ripple-lib":"",
+    "ripple-lib-promise":""
   },
   "readmeFilename": "README.md",
   "description": "ripple-trade-helper trade api for promise",
