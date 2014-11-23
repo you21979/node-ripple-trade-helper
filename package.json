@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "bluebird":"",
     "ripple-lib":"",
     "ripple-lib-promise":""
   },
