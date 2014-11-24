@@ -40,7 +40,7 @@ License
 -------
 MIT License
 
-domate
+donate
 ------
 ripple:raWU9xY9WgG8mrSZs3Gu37XFhFwcxGeDDa  
 bitcoin:1GLnWVBpadWnHpxf8KpXTQdwMdHAWtzNEw  
