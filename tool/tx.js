@@ -5,5 +5,5 @@ var api = RTH.createPublicApi();
 
 var tx = process.argv.splice(2)
 
-api.transaction(tx).then(console.log).catch(console.log)
+api.transaction(tx).then(RTH.console).catch(console.log)
 
