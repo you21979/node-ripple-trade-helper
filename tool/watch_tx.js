@@ -8,7 +8,6 @@ var RTH = require('..');
 var opt = process.argv.splice(2)
 
 var offerCreate = function(tx, accounts){
-    var account = 'rNXddNbin6V98gqCGjWk9UzCsaG8z1mJz4';
     var w = tx.mmeta._affectedAccounts.
         filter(function(v){return accounts.filter(function(account){ return v === account }).length});
     if(w.length)RTH.console(tx)
