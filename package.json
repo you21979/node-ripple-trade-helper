@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "ripple-lib":"",
-    "ripple-lib-promise":""
+    "ripple-lib-promise":"git://github.com/you21979/node-ripple-lib-promise.git"
   },
   "readmeFilename": "README.md",
   "description": "ripple-trade-helper trade api for promise",
