@@ -43,3 +43,7 @@ Taker : 板を食う人、板にぶつけてすぐに換金する人、指値注
 注２)
 ripple-libを経由しないで直接requestBookOffersを呼ぶと正常な注文にはtaker_pays_fundedなどが入っていないため例外を自分で書かなくてはならない
 
+
+注３）
+フォーラムにこのことが書かれている
+https://forum.ripple.com/viewtopic.php?f=2&t=4324
