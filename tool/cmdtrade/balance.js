@@ -6,7 +6,7 @@ var config = JSON.parse(fs.readFileSync("./wallet.json", "utf8"));
 
 var opt = process.argv.splice(2)
 if(opt.length !== 1){
-    console.log("%s exchange address amount currency", process.argv[1])
+    console.log("%s exchange", process.argv[1])
     console.log(" exchange = wallet name");
     return;
 }
