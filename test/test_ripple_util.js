@@ -45,9 +45,9 @@ describe('orderbook offer to human', function() {
                    value: '4208.264748676359' },
                 TakerPays: '2475425097',
                 owner_funds: '4208.222663449724',
-                taker_pays_funded:'2475400341.231899',//bid_amount
-                taker_gets_funded: '4208.222663449724',
-                quality:'588229.4116488536',//bid_price
+                taker_pays_funded:'2475400341.231899',//amount
+                taker_gets_funded: '4208.222663449724',//total price
+                quality:'588229.4116488536',
             }
             assert(tbl.bid_amount(v) === 2475.400341231899);
             assert(tbl.bid_price(v) === 1.7000170005048216);
@@ -62,10 +62,10 @@ describe('orderbook offer to human', function() {
                    value: '20823.86657515199' },
                 owner_funds: '50462606093',
                 quality: '0.000001719099915351535',
-                taker_gets_funded: '12113238090',
-                taker_pays_funded: '20823.86657515199',
+                taker_pays_funded: '20823.86657515199',//total price
+                taker_gets_funded: '12113238090',//amount
             }
-            assert(tbl.ask_amount(v) === 20823.86657515199);
+            assert(tbl.ask_amount(v) === 12113.23809);
             assert(tbl.ask_price(v) === 1.719099915351535);
         });
     });
@@ -81,8 +81,8 @@ describe('orderbook offer to human', function() {
                    value: '20823.86657515199' },
                 owner_funds: '50462606093',
                 quality: '0.000001719099915351535',
-                taker_gets_funded: '12113238090',
-                taker_pays_funded: '20823.86657515199',
+                taker_pays_funded: '20823.86657515199',//amount
+                taker_gets_funded: '12113238090',//total price
             }
             assert(tbl.bid_amount(v) === 20823.86657515199);
             assert(tbl.bid_price(v) === 0.5816997552440181);
@@ -96,12 +96,47 @@ describe('orderbook offer to human', function() {
                    value: '4208.264748676359' },
                 TakerPays: '2475425097',
                 owner_funds: '4208.222663449724',
-                taker_pays_funded:'2475400341.231899',
-                taker_gets_funded: '4208.222663449724',
                 quality:'588229.4116488536',
+                taker_pays_funded:'2475400341.231899',//totalprice
+                taker_gets_funded: '4208.222663449724',//amount
             }
-            assert(tbl.ask_amount(v) === 2475.400341231899);
+            assert(tbl.ask_amount(v) === 4208.222663449724);
             assert(tbl.ask_price(v) === 0.5882294116488536);
+        });
+    });
+    describe('btc_xrp', function() {
+        var pair = 'btc_xrp';
+        it('book bid', function() {
+            var tbl = RippleUtil.convertOrderBookPriceTaker(pair);
+            var v = {
+                TakerGets: '19881064051',
+                TakerPays:
+                 { currency: 'BTC',
+                   issuer: 'rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q',
+                   value: '0.7079520169240091' },
+                owner_funds: '4006263503773',
+                quality: '3560936251238523e-26',
+                taker_pays_funded: '0.7079520169240091',
+                taker_gets_funded: '19881064051',
+            }
+            assert(tbl.bid_amount(v) === 0.7079520169240091);
+            assert(tbl.bid_price(v) === 28082.502169259325);
+        });
+        it('book ask', function() {
+            var tbl = RippleUtil.convertOrderBookPriceTaker(pair);
+            var v = {
+                TakerGets:
+                 { currency: 'BTC',
+                   issuer: 'rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q',
+                   value: '0.059178195565561' },
+                TakerPays: '1668749249',
+                owner_funds: '0.0591776037895231',
+                quality: '28198718008.41348',
+                taker_pays_funded: '1668732561.674382',
+                taker_gets_funded: '0.0591776037895231',
+            }
+            assert(tbl.ask_amount(v) === 0.0591776037895231);
+            assert(tbl.ask_price(v) === 28198.718008413478);
         });
     });
 });
