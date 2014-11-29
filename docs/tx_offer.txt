@@ -1,0 +1,40 @@
+offerの挙動
+-----------
+
+bookofferのパラメータには似たようなパラメータがいくつかあるのでわかりにくくなっている
+
+
+XRP_JPY BID時のリザルトはこんな感じで帰ってくる
+```
+    {
+	TakerGets:
+	 { currency: 'JPY',
+	   issuer: 'rMAz5ZnK73nyNUL4foAvaxdreczCkG3vA6',
+	   value: '4208.264748676359' },
+	TakerPays: '2475425097',
+	owner_funds: '4208.222663449724',
+	taker_pays_funded:'2475400341.231899',//amount
+	taker_gets_funded: '4208.222663449724',//total price
+	quality:'588229.4116488536',
+    }
+```
+
+TakerGetsはTakerが得る金額(JPY)
+TakerPaysはTakerが支払う金額(XRP)
+
+注文的にはこれだけで良さそうなものだが問題があり他のパラメータが追加されている
+上記２つは注文時の情報であり注文後にバランスが変動した時などに実際に支払えないのに注文が残っている（スパム）
+
+それでほかのパラメータが存在している
+
+taker_gets_fundedは実際にTakerが得る金額(JPY)
+taker_pays_fundedは実際にTakerが支払う金額(XRP)
+
+となっていて注文を出した人の現在のバランスに応じて変化するようになっている
+
+owner_fundsは注文を出した人の現在のバランス。この場合はtaker_pays_fundedと同じ値（注文を出した人のエイリアスと考えて良い）
+qualityは比率なので単価を算出するときに使う
+
+
+注)Taker : 板を食う人、板にぶつけてすぐに換金する人、指値注文をしない人
+
