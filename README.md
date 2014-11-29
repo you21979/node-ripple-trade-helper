@@ -1,6 +1,8 @@
 node-ripple-trade-helper
 ========================
 
+[![Build Status](https://secure.travis-ci.org/you21979/node-ripple-trade-helper.png?branch=master)](https://travis-ci.org/you21979/node-ripple-trade-helper)  
+
 what is this
 ------------
 
