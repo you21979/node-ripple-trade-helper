@@ -11,9 +11,11 @@
   "description": "ripple-trade-helper trade api for promise",
   "main": "index.js",
   "devDependencies": {
+    "power-assert":"",
+    "mocha":""
   },
   "scripts": {
-    "test": ""
+    "test": "node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
