@@ -22,13 +22,13 @@ var type = opt.shift();
 var price = parseFloat(opt.shift());
 var amount = parseFloat(opt.shift());
 
-var rtj = RTH.createPrivateApi(exchange.address, exchange.secret, exchange.issuer);
+var api = RTH.createPrivateApi(exchange.address, exchange.secret, exchange.issuer);
 switch(type){
 case "buy":
-    rtj.buy(pair, price, amount).then(console.log);
+    api.buy(pair, price, amount).then(console.log);
     break;
 case "sell":
-    rtj.sell(pair, price, amount).then(console.log);
+    api.sell(pair, price, amount).then(console.log);
     break;
 }
 
