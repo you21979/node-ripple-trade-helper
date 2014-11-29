@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var RTH = require('../..');
 var Constant = RTH.Constant;
 
@@ -6,7 +7,13 @@ var config = JSON.parse(fs.readFileSync("./wallet.json", "utf8"));
 
 var opt = process.argv.splice(2)
 if(opt.length !== 5){
-    return console.log("%s exchange pair type price amount", process.argv[1])
+    console.log("%s exchange pair type price amount", process.argv[1])
+    console.log(" exchange = wallet name");
+    console.log(" pair = btc_xrp, xrp_jpy or otherpair");
+    console.log(" type = buy or sell");
+    console.log(" price = float");
+    console.log(" amount = float");
+    return;
 }
 
 var exchange = config[opt.shift()];
