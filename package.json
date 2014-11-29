@@ -1,7 +1,7 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "ripple-trade-helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "dependencies": {
     "ripple-lib":"",

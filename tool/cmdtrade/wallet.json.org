@@ -1,4 +1,9 @@
 {
+ "SS" : {
+  "issuer" : "rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q",
+  "address" : "",
+  "secret" : ""
+ },
  "RMJ" : {
   "issuer" : "rJRi8WW24gt9X85PHAxfWNPCizMMhqUQwg",
   "address" : "",
