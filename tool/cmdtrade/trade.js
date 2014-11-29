@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 var RTH = require('../..');
-var Constant = RTH.Constant;
 
 var fs = require('fs');
 var config = JSON.parse(fs.readFileSync("./wallet.json", "utf8"));

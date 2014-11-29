@@ -16,14 +16,5 @@ var exchange = config[opt.shift()];
 var pair = opt.shift();
 
 var api = RTH.createPrivateApi(exchange.address, exchange.secret, exchange.issuer);
-api.orderBook(pair).then(function(res){
-    console.log('asks\n',res.asks.splice(0, 10).map(function(v){return {
-        price : v[0],
-        amount : v[1],
-    }}).reverse())
-    console.log('bids\n', res.bids.splice(0, 10).map(function(v){return {
-        price : v[0],
-        amount : v[1],
-    }}))
-})
+api.activeOrders(pair).then(console.log).catch(console.log);
 
