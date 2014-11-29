@@ -2,7 +2,7 @@
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "ripple-trade-helper",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "ripple-lib":"",
     "ripple-lib-promise":"git://github.com/you21979/node-ripple-lib-promise.git"
@@ -23,9 +23,7 @@
   },
   "keywords": [
     "trade api",
-    "bitcoin",
-    "monacoin",
-    "ripple-trade-helper"
+    "ripple"
   ],
   "license": "MIT",
   "bugs": {
