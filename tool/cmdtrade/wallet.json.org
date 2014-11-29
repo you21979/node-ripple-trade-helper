@@ -1,0 +1,22 @@
+{
+ "RMJ" : {
+  "issuer" : "rJRi8WW24gt9X85PHAxfWNPCizMMhqUQwg",
+  "address" : "",
+  "secret" : ""
+ },
+ "RTJ" : {
+  "issuer" : "rMAz5ZnK73nyNUL4foAvaxdreczCkG3vA6",
+  "address" : "",
+  "secret" : ""
+ },
+ "RA" : {
+  "issuer" : "rs1jenWbPjUwuL17JmsNniNBFQvMzHgnik",
+  "address" : "",
+  "secret" : ""
+ },
+ "TKY" : {
+  "issuer" : "r94s8px6kSw1uZ1MV98dhSRTvc6VMPoPcN",
+  "address" : "",
+  "secret" : ""
+ }
+}
