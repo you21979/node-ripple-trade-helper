@@ -1,5 +1,5 @@
 var RTH = require('../..');
-var Constant = RTH.Constant;
+var Constant = require('../constant');
 
 var fs = require('fs');
 var config = JSON.parse(fs.readFileSync("./config.json", "utf8"));

@@ -1,6 +1,5 @@
 var RTH = require('..');
-var Constant = RTH.Constant;
-var api = RTH.createPublicApi(Constant.ISSUER.RIPPLE_TRADE_JAPAN);
+var api = RTH.createPublicApi();
 
 api.ping().then(console.log);
 

@@ -1,5 +1,5 @@
 var RTH = require('..');
-var Constant = RTH.Constant;
+var Constant = require('./constant');
 
 var watchlist = [
     Constant.ISSUER.RIPPLE_TRADE_JAPAN,
