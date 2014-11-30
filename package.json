@@ -11,12 +11,13 @@
   "description": "ripple-trade-helper trade api for promise",
   "main": "index.js",
   "devDependencies": {
+    "istanbul":"",
     "coveralls":"",
     "power-assert":"",
     "mocha":""
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha"
   },
   "repository": {
     "type": "git",
