@@ -11,6 +11,7 @@
   "description": "ripple-trade-helper trade api for promise",
   "main": "index.js",
   "devDependencies": {
+    "coveralls":"",
     "power-assert":"",
     "mocha":""
   },
