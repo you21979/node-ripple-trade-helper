@@ -183,8 +183,11 @@ describe('offer to human', function() {
 });
 describe('etc', function() {
     describe('util', function() {
-        it('adjustValue', function() {
-            assert(RippleUtil.adjustValue(0.059178195565561, 5) === 0.05917);
+        it('adjustValueFloor', function() {
+            assert(RippleUtil.adjustValueFloor(0.059178195565561, 5) === 0.05917);
+        });
+        it('adjustValueCeil', function() {
+            assert(RippleUtil.adjustValueCeil(0.059178195565561, 5) === 0.05918);
         });
         it('XRPtoNumber', function() {
             assert(RippleUtil.XRPtoNumber('1668749249') === 1668.749249);
