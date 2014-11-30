@@ -61,7 +61,7 @@ describe('human interface to offer', function() {
         });
     });
 });
-describe('orderbook offer to human', function() {
+describe('offer to human', function() {
     describe('xrp_jpy', function() {
         var pair = 'xrp_jpy';
         it('book bid', function() {
@@ -178,6 +178,19 @@ describe('orderbook offer to human', function() {
             }
 	    assert(RippleUtil.convertOfferPriceTaker(v.TakerGets).value === 0.059178195565561);
 	    assert(RippleUtil.convertOfferPriceTaker(v.TakerPays).value === 1668.749249);
+        });
+    });
+});
+describe('etc', function() {
+    describe('util', function() {
+        it('adjustValue', function() {
+            assert(RippleUtil.adjustValue(0.059178195565561, 5) === 0.05917);
+        });
+        it('XRPtoNumber', function() {
+            assert(RippleUtil.XRPtoNumber('1668749249') === 1668.749249);
+        });
+        it('NumbertoXRP', function() {
+            assert(RippleUtil.NumbertoXRP(1668.749249) === '1668749249');
         });
     });
 });
