@@ -2,7 +2,8 @@ node-ripple-trade-helper
 ========================
 
 [![NPM](https://nodei.co/npm/ripple-trade-helper.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ripple-trade-helper)  
-[![Build Status](https://secure.travis-ci.org/you21979/node-ripple-trade-helper.png?branch=master)](https://travis-ci.org/you21979/node-ripple-trade-helper)  
+[![Build Status](https://secure.travis-ci.org/you21979/node-ripple-trade-helper.png?branch=master)](https://travis-ci.org/you21979/node-ripple-trade-helper)
+[![Coverage Status](https://coveralls.io/repos/you21979/node-ripple-trade-helper/badge.png)](https://coveralls.io/r/you21979/node-ripple-trade-helper)  
 
 what is this
 ------------
