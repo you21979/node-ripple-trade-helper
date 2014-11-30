@@ -54,7 +54,7 @@ describe('human interface to offer', function() {
             assert(xrpjpy.currency_pays === 'JPY' );
             assert(xrpjpy.issuer_gets === UInt160.ACCOUNT_ZERO );
             assert(xrpjpy.currency_gets === 'XRP' );
-            assert(jpyxrp.issuer_pays === UInt160.ACCOUNT_ZERP );
+            assert(jpyxrp.issuer_pays === UInt160.ACCOUNT_ZERO );
             assert(jpyxrp.currency_pays === 'XRP' );
             assert(jpyxrp.issuer_gets === UInt160.ACCOUNT_ONE );
             assert(jpyxrp.currency_gets === 'JPY' );
