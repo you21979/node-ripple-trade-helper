@@ -1,5 +1,7 @@
 var assert = require('power-assert');
 var RippleUtil = require('../lib/ripple_util');
+var ripplelib = require('ripple-lib');
+var UInt160 = ripplelib.UInt160;
 
 describe('human interface to offer', function() {
     describe('xrp_jpy', function() {
@@ -30,6 +32,32 @@ describe('human interface to offer', function() {
             assert(w.sell instanceof Object);
             assert(w.sell.currency === 'BTC');
             assert(w.sell.value === '1');
+        });
+    });
+    describe('orderbook request', function() {
+        it('convertOrderBookBid', function() {
+	    var xrpjpy = RippleUtil.convertOrderBookBid('XRP_JPY', UInt160.ACCOUNT_ONE);
+	    var jpyxrp = RippleUtil.convertOrderBookBid('JPY_XRP', UInt160.ACCOUNT_ONE);
+            assert(xrpjpy.issuer_pays === UInt160.ACCOUNT_ZERO );
+            assert(xrpjpy.currency_pays === 'XRP' );
+            assert(xrpjpy.issuer_gets === UInt160.ACCOUNT_ONE );
+            assert(xrpjpy.currency_gets === 'JPY' );
+            assert(jpyxrp.issuer_pays === UInt160.ACCOUNT_ONE );
+            assert(jpyxrp.currency_pays === 'JPY' );
+            assert(jpyxrp.issuer_gets === UInt160.ACCOUNT_ZERO );
+            assert(jpyxrp.currency_gets === 'XRP' );
+        });
+        it('convertOrderBookAsk', function() {
+	    var xrpjpy = RippleUtil.convertOrderBookAsk('XRP_JPY', UInt160.ACCOUNT_ONE);
+	    var jpyxrp = RippleUtil.convertOrderBookAsk('JPY_XRP', UInt160.ACCOUNT_ONE);
+            assert(xrpjpy.issuer_pays === UInt160.ACCOUNT_ONE );
+            assert(xrpjpy.currency_pays === 'JPY' );
+            assert(xrpjpy.issuer_gets === UInt160.ACCOUNT_ZERO );
+            assert(xrpjpy.currency_gets === 'XRP' );
+            assert(jpyxrp.issuer_pays === UInt160.ACCOUNT_ZERP );
+            assert(jpyxrp.currency_pays === 'XRP' );
+            assert(jpyxrp.issuer_gets === UInt160.ACCOUNT_ONE );
+            assert(jpyxrp.currency_gets === 'JPY' );
         });
     });
 });
@@ -137,6 +165,19 @@ describe('orderbook offer to human', function() {
             }
             assert(tbl.ask_amount(v) === 0.0591776037895231);
             assert(tbl.ask_price(v) === 28198.718008413478);
+        });
+    });
+    describe('offer tx_json', function() {
+        it('OfferPriceTaker', function() {
+            var v = {
+                TakerGets:
+                 { currency: 'BTC',
+                   issuer: 'rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q',
+                   value: '0.059178195565561' },
+                TakerPays: '1668749249',
+            }
+	    assert(RippleUtil.convertOfferPriceTaker(v.TakerGets).value === 0.059178195565561);
+	    assert(RippleUtil.convertOfferPriceTaker(v.TakerPays).value === 1668.749249);
         });
     });
 });
