@@ -6,7 +6,7 @@ var util = require('util');
 
 exports.Constant = require('./lib/constant');
 exports.createPublicApi = function(issuer){ return new PublicApi(issuer); }
-exports.createPublicStream = function(issuer){ return new PublicStream(issuer); }
+exports.createPublicStream = function(issuer, callbacks){ return new PublicStream(issuer, callbacks); }
 exports.createPrivateApi = PrivateApi;
 exports.createPrivateStream = PrivateStream;
 exports.util = require('./lib/ripple_util');
