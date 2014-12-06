@@ -17,13 +17,30 @@ var pair = opt.shift();
 
 var api = RTH.createPrivateApi(exchange.address, exchange.secret, exchange.issuer);
 api.orderBook(pair).then(function(res){
-    console.log('asks\n',res.asks.splice(0, 10).map(function(v){return {
+    return [res.asks.splice(0, 10).map(function(v){return {
         price : v[0],
-        amount : v[1],
-    }}).reverse())
-    console.log('bids\n', res.bids.splice(0, 10).map(function(v){return {
+        amount : RTH.util.adjustValueFloor(v[1], 8),
+    }}).reverse(),
+    res.bids.splice(0, 10).map(function(v){return {
         price : v[0],
-        amount : v[1],
-    }}))
+        amount : RTH.util.adjustValueFloor(v[1], 8),
+    }})
+    ]
+}).then(function(res){
+    var fill = function(data, max){
+        var n = max - data.toString().length;
+        var w = [];
+        for(var i = 0; i<n; ++i) w.push(' ');
+        return data.toString() + w.join('');
+    }
+    var left = 20;
+    var center = 10;
+    console.log("%s",
+        res[0].reduce(function(r,v){ r.push(fill(v.amount, left)+ "|" + fill("  " + v.price.toString(), center) +"|"); return r}, []).join('\n')
+    )
+    console.log("---------------------------------------------------")
+    console.log("%s",
+        res[1].reduce(function(r,v){ r.push(fill('', left)+ "|" + fill("  " + v.price.toString(), center) + "|" + "  "+ v.amount); return r}, []).join('\n')
+    )
 })
 
