@@ -78,7 +78,7 @@ describe('offer to human', function() {
                 quality:'588229.4116488536',
             }
             assert(tbl.bid_amount(v) === 2475.400341231899);
-            assert(tbl.bid_price(v) === 1.7000170005048216);
+            assert(RippleUtil.adjustValueFloor(tbl.bid_price(v), 5) === 1.70001);
         });
         it('book ask', function() {
             var tbl = RippleUtil.convertOrderBookPriceTaker(pair);
@@ -94,7 +94,7 @@ describe('offer to human', function() {
                 taker_gets_funded: '12113238090',//amount
             }
             assert(tbl.ask_amount(v) === 12113.23809);
-            assert(tbl.ask_price(v) === 1.719099915351535);
+            assert(RippleUtil.adjustValueFloor(tbl.ask_price(v), 5) === 1.71909);
         });
     });
     describe('jpy_xrp', function() {
@@ -113,7 +113,7 @@ describe('offer to human', function() {
                 taker_gets_funded: '12113238090',//total price
             }
             assert(tbl.bid_amount(v) === 20823.86657515199);
-            assert(tbl.bid_price(v) === 0.5816997552440181);
+            assert(RippleUtil.adjustValueFloor(tbl.bid_price(v), 5) === 0.58169);
         });
         it('book ask', function() {
             var tbl = RippleUtil.convertOrderBookPriceTaker(pair);
@@ -129,7 +129,7 @@ describe('offer to human', function() {
                 taker_gets_funded: '4208.222663449724',//amount
             }
             assert(tbl.ask_amount(v) === 4208.222663449724);
-            assert(tbl.ask_price(v) === 0.5882294116488536);
+            assert(RippleUtil.adjustValueFloor(tbl.ask_price(v), 5) === 0.58822);
         });
     });
     describe('btc_xrp', function() {
@@ -148,7 +148,7 @@ describe('offer to human', function() {
                 taker_gets_funded: '19881064051',
             }
             assert(tbl.bid_amount(v) === 0.7079520169240091);
-            assert(tbl.bid_price(v) === 28082.502169259325);
+            assert(RippleUtil.adjustValueFloor(tbl.bid_price(v), 5) === 28082.50216);
         });
         it('book ask', function() {
             var tbl = RippleUtil.convertOrderBookPriceTaker(pair);
@@ -164,7 +164,7 @@ describe('offer to human', function() {
                 taker_gets_funded: '0.0591776037895231',
             }
             assert(tbl.ask_amount(v) === 0.0591776037895231);
-            assert(tbl.ask_price(v) === 28198.718008413478);
+            assert(RippleUtil.adjustValueFloor(tbl.ask_price(v), 5) === 28198.71800);
         });
     });
     describe('offer tx_json', function() {
