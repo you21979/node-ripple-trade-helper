@@ -34,7 +34,7 @@ api.orderBook(pair).then(function(res){
         return data.toString() + w.join('');
     }
     var left = 20;
-    var center = 10;
+    var center = 15;
     console.log("%s",
         res[0].reduce(function(r,v){ r.push(fill(v.amount, left)+ "|" + fill("  " + v.price.toString(), center) +"|"); return r}, []).join('\n')
     )
