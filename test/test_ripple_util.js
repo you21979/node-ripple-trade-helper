@@ -189,6 +189,14 @@ describe('etc', function() {
         it('adjustValueCeil', function() {
             assert(RippleUtil.adjustValueCeil(0.059178195565561, 5) === 0.05918);
         });
+        it('numberOfDigits', function() {
+            assert(RippleUtil.numberOfDigits(0.005917819556556) === -2);
+            assert(RippleUtil.numberOfDigits(0.059178195565561) === -1);
+            assert(RippleUtil.numberOfDigits(0.159178195565561) === 0);
+            assert(RippleUtil.numberOfDigits(1.059178195565561) === 1);
+            assert(RippleUtil.numberOfDigits(10.05917819556556) === 2);
+            assert(RippleUtil.numberOfDigits(100.0591781955655) === 3);
+        });
         it('XRPtoNumber', function() {
             assert(RippleUtil.XRPtoNumber('1668749249') === 1668.749249);
         });
