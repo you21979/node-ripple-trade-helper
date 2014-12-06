@@ -42,5 +42,12 @@ api.orderBook(pair, true).then(function(res){
         map(function(k){return [k, bidmaker[k]] }).
         filter(function(v){return v[1] > 1}).
         sort(sorter(1,-1))
-    console.log(ask.slice(0, 5), bid.slice(0, 5))
+    return [ask.slice(0, 5), bid.slice(0, 5)]
+}).then(function(res){
+    console.log("ASK MAKER:\n%s",
+        res[0].reduce(function(r,v){ r.push(" " + v[0] + ":" + v[1]); return r}, []).join('\n')
+    )
+    console.log("BID MAKER:\n%s",
+        res[1].reduce(function(r,v){ r.push(" " + v[0] + ":" + v[1]); return r}, []).join('\n')
+    )
 })
