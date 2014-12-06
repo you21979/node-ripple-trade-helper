@@ -1,7 +1,7 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "ripple-trade-helper",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "dependencies": {
     "bluebird":"",
@@ -27,6 +27,7 @@
   },
   "keywords": [
     "trade api",
+    "xrp",
     "ripple"
   ],
   "license": "MIT",
