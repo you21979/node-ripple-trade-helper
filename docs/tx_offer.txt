@@ -33,7 +33,6 @@ taker_pays_fundedは実際にTakerが支払う金額(XRP)
 となっていて注文を出した人の現在のバランスに応じて変化するようになっている
 
 owner_fundsは注文を出した人の現在のバランス。この場合はtaker_pays_fundedと同じ値（注文を出した人のエイリアスと考えて良い）
-qualityは比率なので単価を算出するときに使う
 
 
 注１)
@@ -47,3 +46,6 @@ ripple-libを経由しないで直接requestBookOffersを呼ぶと正常な注�
 注３）
 フォーラムにこのことが書かれている
 https://forum.ripple.com/viewtopic.php?f=2&t=4324
+
+注４）
+qualityはripple-lib 0.9.4から削除されました
