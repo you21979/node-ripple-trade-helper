@@ -15,15 +15,17 @@ var exchange = config[opt.shift()];
 
 var api = RTH.createPrivateApi(exchange.address, exchange.secret, exchange.issuer);
 api.accountLines(exchange.issuer).then(function(res){
-    console.log(
-        res.filter(function(v){return parseFloat(v.balance) !== 0}).reduce(function(r,v){
-            var name = v.currency;
-            if(v.balance[0] !== '-'){
-                name = [v.currency, v.account].join('.')
-            }
-            if(!(name in r)){r[name]=0}
-            r[name] += parseFloat(v.balance);
-            return r;
-        }, {})
-    )
+    var w = res.filter(function(v){return parseFloat(v.balance) !== 0}).reduce(function(r,v){
+        var name = v.currency;
+        if(v.balance[0] !== '-'){
+            name = [v.currency, v.account].join('.')
+        }
+        if(!(name in r)){r[name]=0}
+        r[name] += parseFloat(v.balance);
+        return r;
+    }, {})
+    Object.keys(w).forEach(function(k){
+        w[k] = RTH.util.adjustValueCeil(w[k], 2);
+    })
+    console.log(w)
 })
