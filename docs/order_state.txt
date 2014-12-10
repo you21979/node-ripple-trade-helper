@@ -1,0 +1,24 @@
+# 注文の概念
+
+## maker と taker
+
+|type|TXタイプ|更新タイプ|更新する注文相手|
+|---|---|---|---|
+|maker|OfferCreate|CreatedNode|自分|
+|taker|OfferCreate|ModifiedNode|相手|
+
+makerとは気配にない値段で注文を出して板を作る注文方法
+takerとは気配にある値段で注文を出して板を減らす注文方法
+
+
+## makerの状態遷移
+
+makerにはステートがある
+
+|更新者|TXタイプ|更新タイプ|内容|
+|---|---|---|---|
+|自分|OfferCreate|CreatedNode|新規注文（未約定）|
+|相手|OfferCreate|ModifiedNode|一部出来|
+|相手|OfferCreate|DeletedNode|全部出来|
+|自分|OfferCancel|DeletedNode|取り消し|
+
