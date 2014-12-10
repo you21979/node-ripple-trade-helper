@@ -22,3 +22,5 @@ makerにはステートがある
 |相手|OfferCreate|DeletedNode|全部出来|
 |自分|OfferCancel|DeletedNode|取り消し|
 
+取り消しには一部取消しと全部取り消しがあるがここでは触れない
+
