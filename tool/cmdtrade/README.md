@@ -64,6 +64,9 @@ SS = snapswap
   funds: { BTC: 10.5, XRP: 1000050.62 } }
 ```
 
-
+5.withdraw
+```
+./withdraw.js SS rxxxxxxxxxxxxxxxx 100 XRP
+```
 
 
