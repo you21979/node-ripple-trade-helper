@@ -5,8 +5,7 @@
   "private": false,
   "dependencies": {
     "bluebird":"",
-    "moment" : "",
-    "ripple-lib":"",
+    "ripple-usecase":"git://github.com/you21979/node-ripple-usecase.git",
     "ripple-lib-promise":"git://github.com/you21979/node-ripple-lib-promise.git"
   },
   "readmeFilename": "README.md",
