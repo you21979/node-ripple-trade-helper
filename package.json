@@ -1,11 +1,11 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "ripple-trade-helper",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "dependencies": {
     "bluebird":"",
-    "ripple-usecase":"git://github.com/you21979/node-ripple-usecase.git",
+    "ripple-lib":"0.11.x",
     "ripple-lib-promise":"git://github.com/you21979/node-ripple-lib-promise.git"
   },
   "readmeFilename": "README.md",
