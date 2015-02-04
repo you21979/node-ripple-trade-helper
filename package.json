@@ -5,6 +5,7 @@
   "private": false,
   "dependencies": {
     "bluebird":"",
+    "moment":"",
     "ripple-lib":"0.11.x",
     "ripple-lib-promise":"git://github.com/you21979/node-ripple-lib-promise.git"
   },
