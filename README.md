@@ -1,3 +1,11 @@
+don't use this software
+========================
+
+* Please do not use because it is old and not maintained. Vulnerability information relating to signature is released to ripple-lib used in this version.
+* https://ripple.com/dev-blog/statement-on-the-biased-nonce-sense-paper/
+
+
+
 node-ripple-trade-helper
 ========================
 
